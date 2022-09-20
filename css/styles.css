@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+#page {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-template-columns: 150px 3fr;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+        "header header"
+        "nav main";
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddf0e4;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#nav {
+    /* display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 150px;
+    grid-template-rows: 30px 30px 30px;
+    grid-gap: 40px; */
+
+    display: grid;
+    padding-top: 30px;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 150px;
+    grid-template-rows: 30px 30px 30px;
+    gap: 30px 0px;
+    grid-template-areas:
+        "inicio"
+        "sobre"
+        "blog";
+}
+
+
+
+
+a {
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ddf0e4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.cover {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-content: center;
+    height: 350px;
+    width: 100%;
+
+
+}
+
+.capa {
+    height: 100%;
+    width: 100%;
+    max-width: 1024px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/Yosemite.jpg);
+}
+
+.content {
+    color: #152d35;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.content h1 {
+    padding-block: 30px;
+
+}
+
+.content P {
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+#nav>.inicio {
+    grid-area: inicio;
+
+}
+
+#nav>.sobre {
+    grid-area: sobre;
+
+}
+
+#nav>.blog {
+    grid-area: blog;
+
+}
+
+
+#page>header {
+    grid-area: header;
+    background-color: #345b63;
+}
+
+#page>nav {
+    grid-area: nav;
+    background-color: #152d35;
+}
+
+#page>main {
+    grid-area: main;
+    background-color: #ddf0e4;
+}
